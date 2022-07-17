@@ -1,7 +1,8 @@
 import './App.css';
 import React, { useState, useReducer, useRef, useEffect } from 'react';
 import GithubUser from './GithubUser';
-
+/* import Lift from './Lift';
+ */
 
 
 
@@ -9,8 +10,6 @@ import GithubUser from './GithubUser';
 custom hook
 
 function useInput(initalValue) {
-
-
   const [value, setValue] = useState(initalValue);
 
   return [
@@ -24,9 +23,71 @@ function useInput(initalValue) {
  */
 
 
+/* 
+ graphQL
+const query = `
+query{
+    allLifts{
+      name
+      elevationGain
+      status
+    }
+  }
 
+`;
+const opts = {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ query })
+}
 
+const Lift = ({ name, elevationGain, status }) => {
+  return (
+    <div>
+      <h1>{name}</h1>
+      <p>{elevationGain}</p>
+      <p>{status}</p>
+    </div>
+  )
+}
+ */
 function App() {
+
+
+  /*   
+    graphQL
+  
+  const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false)
+  
+    useEffect(() => {
+      setLoading(true)
+      fetch('https://snowtooth.moonhighway.com/', opts)
+        .then((response) => response.json())
+        .then(setData)
+        .then(() => setLoading(false))
+        .catch(setError)
+    }, [])
+  
+    if (loading) {
+      return <h1>Loading</h1>
+    }
+    if (error) return <pre>{JSON.stringify(error)}</pre>
+  
+    if (!data) return null;
+  
+    return (
+      <>
+        {data.data.allLifts.map((lift) => (
+          <Lift name={lift.name} elevationGain={lift.elevationGain} status={lift.status} />
+        ))}
+      </>
+    )
+   */
+
+
+
 
   /* 
 
