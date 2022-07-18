@@ -1,11 +1,30 @@
 import './App.css';
 import React, { useState, useReducer, useRef, useEffect } from 'react';
 import GithubUser from './GithubUser';
+/* import Aboutus from './Aboutus';
+ */import Gallery from './Gallery';
+import Contactus from './Contactus';
+import { Link, Outlet } from 'react-router-dom'
 /* import Lift from './Lift';
  */
 
 
+export const Aboutus = () => {
+  return (
+    <div>
+      <nav>
+        <Link to="/homepage">Homepage</Link> |
+        <Link to="/aboutus"> About us</Link> |
+        <Link to="/gallery"> Gallery</Link>
 
+      </nav>
+
+      <h1>About us</h1>
+      <h1><Outlet /></h1>
+
+    </div>
+  )
+}
 /* 
 custom hook
 
@@ -76,6 +95,10 @@ function List({ data, renderItem, renderEmpty }) {
  */
 
 function App() {
+
+
+
+
 
   /*   
     graphQL
@@ -254,6 +277,20 @@ function App() {
           renderItem={item => <> {item.name} - {item.elevation} ft</>}
 
         /> */}
+
+
+
+
+        <nav>
+          <Link to="/homepage">Homepage</Link> |
+          <Link to="/aboutus"> About us</Link> |
+          <Link to="/gallery"> Gallery</Link>
+
+        </nav>
+
+
+
+
 
 
 
